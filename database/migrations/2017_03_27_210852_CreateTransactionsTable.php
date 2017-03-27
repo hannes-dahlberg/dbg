@@ -16,14 +16,13 @@ class CreateTransactionsTable extends Migration
         Schema::create('transactions', function(Blueprint $table) {
             $table->increments('id');
             $table->integer('period');
-            $table->string('text', 255);
-            $table->text('description');
+            $table->text('description')->nullable();
             $table->decimal('amount');
             $table->integer('budget_id');
-            $table->integer('from_account_id');
-            $table->integer('to_account_ud');
+            $table->integer('from_account_id')->nullable();
+            $table->integer('to_account_ud')->nullable();
             $table->date('date');
-            $table->string('import_checksum', 32);
+            $table->string('import_checksum', 32)->nullable();
             $table->timestamps();
         });
     }

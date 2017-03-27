@@ -16,7 +16,7 @@ class CreateBudgetTable extends Migration
         Schema::create('budget', function(Blueprint $table) {
             $table->increments('id');
             $table->string('name', 255);
-            $table->text('description');
+            $table->text('description')->nullable();
             $table->decimal('amount');
             $table->timestamps();
         });
