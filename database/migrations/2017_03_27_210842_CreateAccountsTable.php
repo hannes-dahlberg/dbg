@@ -18,7 +18,7 @@ class CreateAccountsTable extends Migration
             $table->string('name',  255);
             $table->text('description')->nullable();
             $table->enum('type', ['fictional', 'non-fictional'])->default('non-fictional');
-            $table->integer('parent');
+            $table->integer('parent_account_id');
             $table->timestamps();
         });
     }
