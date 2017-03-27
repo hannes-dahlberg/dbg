@@ -1,0 +1,98 @@
+@for $a from 0 through 20 {
+  $margin: $a * 10;
+
+  .margin-#{$margin} {
+    margin: #{$margin}px;
+  }
+  .margin-top-#{$margin} {
+    margin-top: #{$margin}px;
+  }
+  .margin-right-#{$margin} {
+    margin-right: #{$margin}px;
+  }
+  .margin-bottom-#{$margin} {
+    margin-bottom: #{$margin}px;
+  }
+  .margin-left-#{$margin} {
+    margin-left: #{$margin}px;
+  }
+
+  @for $b from 1 through 4 {
+    @if($b == 1) {
+      @media(max-width: $screen-xs-max) {
+        .margin-xs-#{$margin} {
+          margin: #{$margin}px;
+        }
+        .margin-xs-top-#{$margin} {
+          margin-top: #{$margin}px;
+        }
+        .margin-xs-right-#{$margin} {
+          margin-right: #{$margin}px;
+        }
+        .margin-xs-bottom-#{$margin} {
+          margin-bottom: #{$margin}px;
+        }
+        .margin-xs-left-#{$margin} {
+          margin-left: #{$margin}px;
+        }
+      }
+    }
+    @if($b == 2) {
+      @media(min-width: $screen-sm-min) {
+        .margin-sm-#{$margin} {
+          margin: #{$margin}px;
+        }
+        .margin-sm-top-#{$margin} {
+          margin-top: #{$margin}px;
+        }
+        .margin-sm-right-#{$margin} {
+          margin-right: #{$margin}px;
+        }
+        .margin-sm-bottom-#{$margin} {
+          margin-bottom: #{$margin}px;
+        }
+        .margin-sm-left-#{$margin} {
+          margin-left: #{$margin}px;
+        }
+      }
+    }
+    @if($b == 3) {
+      @media(min-width: $screen-md-min) {
+        .margin-md-#{$margin} {
+          margin: #{$margin}px;
+        }
+        .margin-md-top-#{$margin} {
+          margin-top: #{$margin}px;
+        }
+        .margin-md-right-#{$margin} {
+          margin-right: #{$margin}px;
+        }
+        .margin-md-bottom-#{$margin} {
+          margin-bottom: #{$margin}px;
+        }
+        .margin-md-left-#{$margin} {
+          margin-left: #{$margin}px;
+        }
+      }
+    }
+    @if($b == 4) {
+      @media(min-width: $screen-lg-min) {
+        .margin-lg-#{$margin} {
+          margin: #{$margin}px;
+        }
+        .margin-lg-top-#{$margin} {
+          margin-top: #{$margin}px;
+        }
+        .margin-lg-right-#{$margin} {
+          margin-right: #{$margin}px;
+        }
+        .margin-lg-bottom-#{$margin} {
+          margin-bottom: #{$margin}px;
+        }
+        .margin-lg-left-#{$margin} {
+          margin-left: #{$margin}px;
+        }
+      }
+    }
+  }
+}

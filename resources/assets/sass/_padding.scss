@@ -1,0 +1,98 @@
+@for $a from 0 through 20 {
+  $padding: $a * 10;
+
+  .padding-#{$padding} {
+    padding: #{$padding}px;
+  }
+  .padding-top-#{$padding} {
+    padding-top: #{$padding}px;
+  }
+  .padding-right-#{$padding} {
+    padding-right: #{$padding}px;
+  }
+  .padding-bottom-#{$padding} {
+    padding-bottom: #{$padding}px;
+  }
+  .padding-left-#{$padding} {
+    padding-left: #{$padding}px;
+  }
+
+  @for $b from 1 through 4 {
+    @if($b == 1) {
+      @media(max-width: $screen-xs-max) {
+        .padding-xs-#{$padding} {
+          padding: #{$padding}px;
+        }
+        .padding-xs-top-#{$padding} {
+          padding-top: #{$padding}px;
+        }
+        .padding-xs-right-#{$padding} {
+          padding-right: #{$padding}px;
+        }
+        .padding-xs-bottom-#{$padding} {
+          padding-bottom: #{$padding}px;
+        }
+        .padding-xs-left-#{$padding} {
+          padding-left: #{$padding}px;
+        }
+      }
+    }
+    @if($b == 2) {
+      @media(min-width: $screen-sm-min) {
+        .padding-sm-#{$padding} {
+          padding: #{$padding}px;
+        }
+        .padding-sm-top-#{$padding} {
+          padding-top: #{$padding}px;
+        }
+        .padding-sm-right-#{$padding} {
+          padding-right: #{$padding}px;
+        }
+        .padding-sm-bottom-#{$padding} {
+          padding-bottom: #{$padding}px;
+        }
+        .padding-sm-left-#{$padding} {
+          padding-left: #{$padding}px;
+        }
+      }
+    }
+    @if($b == 3) {
+      @media(min-width: $screen-md-min) {
+        .padding-md-#{$padding} {
+          padding: #{$padding}px;
+        }
+        .padding-md-top-#{$padding} {
+          padding-top: #{$padding}px;
+        }
+        .padding-md-right-#{$padding} {
+          padding-right: #{$padding}px;
+        }
+        .padding-md-bottom-#{$padding} {
+          padding-bottom: #{$padding}px;
+        }
+        .padding-md-left-#{$padding} {
+          padding-left: #{$padding}px;
+        }
+      }
+    }
+    @if($b == 4) {
+      @media(min-width: $screen-lg-min) {
+        .padding-lg-#{$padding} {
+          padding: #{$padding}px;
+        }
+        .padding-lg-top-#{$padding} {
+          padding-top: #{$padding}px;
+        }
+        .padding-lg-right-#{$padding} {
+          padding-right: #{$padding}px;
+        }
+        .padding-lg-bottom-#{$padding} {
+          padding-bottom: #{$padding}px;
+        }
+        .padding-lg-left-#{$padding} {
+          padding-left: #{$padding}px;
+        }
+      }
+    }
+  }
+}
