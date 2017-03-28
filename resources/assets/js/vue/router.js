@@ -1,6 +1,9 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 
+//Middleware
+import middleware from './middleware'
+
 //Import templates
 import index from './templates/index.vue'
 
