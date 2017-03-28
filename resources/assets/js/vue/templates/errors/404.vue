@@ -1,6 +1,6 @@
 <template>
     <div>
-         <router-view></router-view>
+        404d
     </div>
 </template>
 <script>
