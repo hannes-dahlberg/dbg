@@ -13,7 +13,7 @@
                 </div>
                 <div class="collapse navbar-collapse">
                     <ul class="nav navbar-nav">
-                        <li v-for="item in menu">
+                        <li v-for="item in menu" :class="{ 'active': $route.name == 'page.' + item.name }">
                             <router-link :to="{ name: 'page.' + item.name }">{{ $t('menu.' + item.name) }}</router-link>
                         </li>
                     </ul>
