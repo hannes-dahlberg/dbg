@@ -7,7 +7,7 @@ export default {
     actions: {
         getTransactions({ state }) {
             return new Promise((resolve, reject) => {
-                transaction_id.index().then(transactions => {
+                transaction.index().then(transactions => {
                     state.transactions = transactions
                     resolve()
                 }).catch(error => reject(error))

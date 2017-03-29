@@ -7,7 +7,7 @@ export default {
     actions: {
         getAccounts({ state }) {
             return new Promise((resolve, reject) => {
-                account_id.index().then(accounts => {
+                account.index().then(accounts => {
                     state.accounts = accounts
                     resolve()
                 }).catch(error => reject(error))

@@ -7,7 +7,7 @@ export default {
     actions: {
         getBudgets({ state }) {
             return new Promise((resolve, reject) => {
-                budget_id.index().then(budgets => {
+                budget.index().then(budgets => {
                     state.budgets = budgets
                     resolve()
                 }).catch(error => reject(error))
