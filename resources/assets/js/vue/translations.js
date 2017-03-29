@@ -26,6 +26,9 @@ const translations = {
             'remember_me': 'Kom ihåg mig',
             'submit': 'Logga in',
             'error': 'Felaktiga uppgifter. Försök igen'
+        },
+        'period': {
+            'period': 'År & månad'
         }
     }
 }
