@@ -4,6 +4,7 @@ import $ from 'jquery'
 import Vue from 'vue'
 import axios from 'axios'
 import bootstrapSass from 'bootstrap-sass'
+import selectize from 'selectize'
 
 //Setting to window
 window.$ = window.jQuery = $
