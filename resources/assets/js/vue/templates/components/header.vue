@@ -48,7 +48,10 @@
     </header>
 </template>
 <script>
+    import selectize from './selectize.vue'
+
     export default {
+        components: { selectize },
         computed: {
             menu() {
                 return this.$store.getters.getMenu;
@@ -56,6 +59,9 @@
             isAuth() {
                 return this.$store.getters.isAuth;
             },
+            period() {
+                return this.$store.getters.getPeriod;
+            }
         }
     }
 </script>

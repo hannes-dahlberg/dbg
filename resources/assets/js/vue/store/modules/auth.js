@@ -21,6 +21,15 @@ export default {
                     resolve()
                 }).catch(error => reject(error))
             })
+        },
+        logout({ state }) {
+            return new Promise((resolve, reject) => {
+                state.login = false
+                state.user = null
+                state.token = null
+
+                resolve()
+            });
         }
     },
     getters: {
