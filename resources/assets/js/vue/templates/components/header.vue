@@ -39,6 +39,9 @@
                             </div><!-- /input-group -->
                         </li>
                         <li v-if="isAuth">
+                            <a href="" v-on:click.prevent="logout">{{ $t('menu.logout') }}</a>
+                        </li>
+                        <li v-if="!isAuth">
                             <router-link :to="{ name: 'auth.login' }">{{ $t('menu.login') }}</router-link>
                         </li>
                     </ul>
@@ -61,6 +64,13 @@
             },
             period() {
                 return this.$store.getters.getPeriod;
+            }
+        },
+        methods: {
+            logout() {
+                this.$store.dispatch('logout').then(() => {
+                    this.$router.push({ name: 'page.about' })
+                });
             }
         }
     }
