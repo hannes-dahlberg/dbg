@@ -16,7 +16,8 @@ const translations = {
             'budget': 'Budget',
             'accounts': 'Konton',
             'transactions': 'Transaktioner',
-            'login': 'Logga in'
+            'login': 'Logga in',
+            'logout': 'Logga ut'
         },
         'login': {
             'header': 'Logga in',

@@ -17,8 +17,28 @@
                             <router-link :to="{ name: 'page.' + item.name }">{{ $t('menu.' + item.name) }}</router-link>
                         </li>
                     </ul>
-                    <ul v-if="!isAuth" class="nav navbar-nav navbar-right">
-                        <li>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li v-if="isAuth">
+                            <div class="input-group">
+                                <span class="input-group-label">{{ $t('period.period') }}:</span>
+                                <span class="input-group-btn">
+                                    <button class="btn btn-primary" type="button" v-on:click.prevent="$store.dispatch('previousMonth')">
+                                        <i class="fa fa-arrow-left" aria-hidden="true"></i>
+                                    </button>
+                                </span>
+                                <span class="input-group-btn">
+                                    <button class="btn btn-default" type="button" v-on:click.prevent="$store.dispatch('setNow')">
+                                        {{ period }}
+                                    </button>
+                                </span>
+                                <span class="input-group-btn">
+                                    <button class="btn btn-primary" type="button" v-on:click.prevent="$store.dispatch('nextMonth')">
+                                        <i class="fa fa-arrow-right" aria-hidden="true"></i>
+                                    </button>
+                                </span>
+                            </div><!-- /input-group -->
+                        </li>
+                        <li v-if="isAuth">
                             <router-link :to="{ name: 'auth.login' }">{{ $t('menu.login') }}</router-link>
                         </li>
                     </ul>
