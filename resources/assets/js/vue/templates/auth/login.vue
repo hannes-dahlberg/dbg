@@ -52,8 +52,8 @@
 
                 //Dispatch the authentication action with user input email and password
                 this.$store.dispatch('auth', this.form).then(() => { //Success
-                    //Redirect to admin page
-                    this.$router.push({ name: 'page.about' })
+                    //Redirect to main page
+                    this.$router.push({ name: 'page.budget' })
                 }).catch((error) => { //Error
                     //Setting error to true
                     this.error = true
