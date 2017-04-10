@@ -1,25 +1,27 @@
 <template>
-    <div class="row">
-        <div class="col-xs-12 col-md-4 col-md-offset-4 well text-center">
-            <h2>{{ $t('login.header') }}</h2>
-            <form id="login_form" v-on:submit.prevent="login">
-                <div class="form-group" :class="{ 'has-error': error }">
-                    <input type="text" class="form-control" :placeholder="$t('login.username')" v-model="form.username" :disabled="loading" />
-                </div>
-                <div class="form-group" :class="{ 'has-error': error }">
-                    <input type="password" class="form-control" :placeholder="$t('login.password')" v-model="form.password" :disabled="loading" />
-                </div>
-                <div class="checkbox">
-                    <label>
-                        <input type="checkbox">
-                        {{ $t('login.remember_me') }}
-                    </label>
-                </div>
-                <button type="submit" class="btn btn-default">{{ $t('login.submit') }}</button>
-                <p v-if="error" class="bg-danger margin-top-10 padding-10">
-                    {{ $t('login.error') }}
-                </p>
-            </form>
+    <div>
+        <div class="row">
+            <div class="col-xs-12 col-md-4 col-md-offset-4 well text-center">
+                <h2>{{ $t('login.header') }}</h2>
+                <form id="login_form" v-on:submit.prevent="login">
+                    <div class="form-group" :class="{ 'has-error': error }">
+                        <input type="text" class="form-control" :placeholder="$t('login.username')" v-model="form.username" :disabled="loading" />
+                    </div>
+                    <div class="form-group" :class="{ 'has-error': error }">
+                        <input type="password" class="form-control" :placeholder="$t('login.password')" v-model="form.password" :disabled="loading" />
+                    </div>
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox">
+                            {{ $t('login.remember_me') }}
+                        </label>
+                    </div>
+                    <button type="submit" class="btn btn-default">{{ $t('login.submit') }}</button>
+                    <p v-if="error" class="bg-danger margin-top-10 padding-10">
+                        {{ $t('login.error') }}
+                    </p>
+                </form>
+            </div>
         </div>
     </div>
 </template>

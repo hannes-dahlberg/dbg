@@ -22,14 +22,14 @@ export default {
         },
         updateAccount({ state }, payload) {
             return new Promise((resolve, reject) => {
-                account.update(payload.accountId, payload.data).then(() => {
+                account.update(payload.account.id, payload.data).then(() => {
                     resolve()
                 }).catch(error => reject(error))
             })
         },
         deleteAccount({ state }, payload) {
             return new Promise((resolve, reject) => {
-                account.destroy(payload.accountId).then(() => {
+                account.destroy(payload.account.id).then(() => {
                     resolve()
                 }).catch(error => reject(error))
             })

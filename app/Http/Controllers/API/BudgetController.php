@@ -9,10 +9,17 @@ class BudgetController extends Controller {
         return Budget::all();
     }
     public function store(Request $request) {
-        Budget::create($request->all());
+        //Look for single item or array
+        if(isset($request->all()['name'])) {
+            Budget::create($request->all());
+        } elseif(is_array($request->all()[0])) {
+            foreach($request->all() as $item) {
+                Budget::create($item);
+            }
+        }
     }
     public function update(Request $request, Budget $budget) {
-        $budget->fill($request->all());
+        $budget->fill($request->all())->save();
     }
     public function destroy(Budget $budget) {
         $budget->delete();

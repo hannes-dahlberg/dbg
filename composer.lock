@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "b86a648fdf8da14c5f23bf5ebf8d08dd",
+    "content-hash": "7d207de3be7230147dfc2c4747ef0f4c",
     "packages": [
         {
             "name": "dnoegel/php-xdg-base-dir",
@@ -2532,6 +2532,57 @@
                 "environment"
             ],
             "time": "2016-09-01T10:05:43+00:00"
+        },
+        {
+            "name": "walle89/swedbank-json",
+            "version": "0.7.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/walle89/SwedbankJson.git",
+                "reference": "0f42bbeee6d09539be66be65ee45a5e499939af1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/walle89/SwedbankJson/zipball/0f42bbeee6d09539be66be65ee45a5e499939af1",
+                "reference": "0f42bbeee6d09539be66be65ee45a5e499939af1",
+                "shasum": ""
+            },
+            "require": {
+                "ext-curl": "*",
+                "guzzlehttp/guzzle": "^6.2.1",
+                "php": ">=5.5",
+                "ramsey/uuid": "^3.0.0"
+            },
+            "require-dev": {
+                "cogpowered/finediff": "0.3.*",
+                "monolog/monolog": "^1.17",
+                "rtheunissen/guzzle-log-middleware": "^0.4.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "SwedbankJson\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Eric Wallmander",
+                    "homepage": "http://wallmander.net/"
+                }
+            ],
+            "description": " Unofficial API client for the Swedbank's and Sparbanken's mobile apps in Sweden.",
+            "homepage": "https://github.com/walle89/SwedbankJson",
+            "keywords": [
+                "Swedbank",
+                "api",
+                "json",
+                "wrapper"
+            ],
+            "time": "2016-10-22T16:51:01+00:00"
         },
         {
             "name": "zendframework/zend-diactoros",

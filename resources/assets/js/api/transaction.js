@@ -14,14 +14,14 @@ export default {
             }).catch(error => reject(error))
         })
     },
-    update(staffId, data) {
+    update(transactionId, data) {
         return new Promise((resolve, reject) => {
             axios.put('/api/transaction/' + transactionId, data).then(response => {
                 resolve()
             }).catch(error => reject(error))
         })
     },
-    destroy(staffId) {
+    destroy(transactionId) {
         return new Promise((resolve, reject) => {
             axios.delete('/api/transaction/' + transactionId).then(response => {
                 resolve()

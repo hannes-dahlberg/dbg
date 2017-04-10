@@ -8,20 +8,19 @@ export default {
     },
     store(data) {
         return new Promise((resolve, reject) => {
-            console.log(data)
             axios.post('/api/budget', data).then(response => {
                 resolve()
             }).catch(error => reject(error))
         })
     },
-    update(staffId, data) {
+    update(budgetId, data) {
         return new Promise((resolve, reject) => {
             axios.put('/api/budget/' + budgetId, data).then(response => {
                 resolve()
             }).catch(error => reject(error))
         })
     },
-    destroy(staffId) {
+    destroy(budgetId) {
         return new Promise((resolve, reject) => {
             axios.delete('/api/budget/' + budgetId).then(response => {
                 resolve()

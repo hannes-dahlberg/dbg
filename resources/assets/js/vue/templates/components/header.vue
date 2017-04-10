@@ -19,8 +19,8 @@
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
                         <li v-if="isAuth">
+                            <span class="input-group-label">{{ $t('period.period') }}:</span>
                             <div class="input-group">
-                                <span class="input-group-label">{{ $t('period.period') }}:</span>
                                 <span class="input-group-btn">
                                     <button class="btn btn-primary" type="button" v-on:click.prevent="$store.dispatch('previousMonth')">
                                         <i class="fa fa-arrow-left" aria-hidden="true"></i>

@@ -1,0 +1,68 @@
+.navbar-nav > li > .input-group {
+    margin-top: 3px;
+}
+.input-group {
+    .selectize-control > .selectize-input {
+        top: 3px;
+        padding: 8px 8px 8.2px;
+        box-shadow: none;
+    }
+}
+.input-group-label {
+    padding: 12px;
+    display: inline-block;
+    float: left;
+    font-weight: bold;
+}
+
+.navbar-nav .input-group {
+    display: inline-block;
+    float: right;
+}
+
+table.items {
+    td {
+        .view {
+            display: block;
+        }
+        .edit {
+            display: none;
+        }
+    }
+    tr.editing td {
+        &:not(.native-padding) {
+            padding: 0px;
+        }
+        .view {
+            display: none;
+        }
+        .edit {
+            input {
+                margin: 0px;
+                padding: 8px;
+                height: 100%;
+                width: 100%;
+                border: 0px;
+            }
+            display: block;
+        }
+        .selectize-input {
+            padding: $selectize-padding-y $selectize-padding-x;
+            border: 0px;
+            display: block;
+            box-shadow: none;
+        }
+        .input-active {
+            display: block !important;
+        }
+    }
+}
+
+.selectize-input {
+    padding: $selectize-padding-y - 1 $selectize-padding-x $selectize-padding-y - 1;
+    box-shadow: none;
+}
+
+.tooltip-inner {
+    text-align: left !important;
+}

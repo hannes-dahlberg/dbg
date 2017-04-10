@@ -1,6 +1,6 @@
 <template>
     <div>
-        404d
+        404
     </div>
 </template>
 <script>

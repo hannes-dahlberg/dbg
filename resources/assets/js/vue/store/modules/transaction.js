@@ -20,16 +20,16 @@ export default {
                 }).catch(error => reject(error))
             })
         },
-        updateTransaction({ state }, payload) {
+        updateTransaction({ state }, transaction) {
             return new Promise((resolve, reject) => {
-                transaction.update(payload.transactionId, payload.data).then(() => {
+                transaction.update(transaction.id, transaction).then(() => {
                     resolve()
                 }).catch(error => reject(error))
             })
         },
-        deleteTransaction({ state }, payload) {
+        deleteTransaction({ state }, transaction) {
             return new Promise((resolve, reject) => {
-                transaction.destroy(payload.transactionId).then(() => {
+                transaction.destroy(transaction.id).then(() => {
                     resolve()
                 }).catch(error => reject(error))
             })

@@ -15,6 +15,7 @@
     "jquery": "^3.1.1",
     "laravel-mix": "^0.8.3",
     "lodash": "^4.17.4",
+    "nodehelpers": "git+https://github.com/hannes-dahlberg/nodehelpers.git",
     "selectize": "^0.12.4",
     "selectize-scss": "^0.9.2",
     "vue": "^2.1.10",

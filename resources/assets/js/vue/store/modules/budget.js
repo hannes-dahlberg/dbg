@@ -1,43 +1,51 @@
-import budget from '../../../api/budget'
+import budgetApi from '../../../api/budget'
+import Vue from 'vue'
 
 export default {
     state: {
-        budgets: []
+        budgets: [],
+        types: ['expense', 'income', 'transfer']
     },
     actions: {
         getBudgets({ state }) {
             return new Promise((resolve, reject) => {
-                budget.index().then(budgets => {
+                budgetApi.index().then(budgets => {
                     state.budgets = budgets
                     resolve()
                 }).catch(error => reject(error))
             })
         },
-        createBudget({ state }, payload) {
+        createBudget({ state }, budget) {
             return new Promise((resolve, reject) => {
-                budget.store(payload.data).then(() => {
+                budgetApi.store(budget).then(() => {
                     resolve()
                 }).catch(error => reject(error))
             })
         },
-        updateBudget({ state }, payload) {
+        updateBudget({ state }, budget) {
             return new Promise((resolve, reject) => {
-                budget.update(payload.budgetId, payload.data).then(() => {
+                budgetApi.update(budget.id, budget).then(() => {
                     resolve()
                 }).catch(error => reject(error))
             })
         },
-        deleteBudget({ state }, payload) {
+        deleteBudget({ state }, budget) {
             return new Promise((resolve, reject) => {
-                budget.destroy(payload.budgetId).then(() => {
+                budgetApi.destroy(budget.id).then(() => {
                     resolve()
                 }).catch(error => reject(error))
             })
         },
+        addNewBudget({ state }) {
+            state.budgets.push({ name: Vue.t('budget.new.name'), description: '', type: Vue.t('budget.new.type'), amount: Vue.t('budget.new.amount') });
+        }
     },
     getters: {
         getBudgets(state) {
             return state.budgets
+        },
+        getBudgetTypes(state) {
+            return state.types
         }
     }
 }
